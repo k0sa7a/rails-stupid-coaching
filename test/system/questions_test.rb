@@ -10,10 +10,12 @@ class QuestionsTest < ApplicationSystemTestCase
   test "visiting /ask renders form" do
     visit ask_url
     assert_selector "p", text: "Ask your coach anything"
+    take_screenshot
   end
 
   test "visiting /answer" do
     visit answer_url
     assert_selector "a", text: "Ask your coach another question"
+    take_screenshot
   end
 end
